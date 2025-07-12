@@ -1,11 +1,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import noteRoutes from "./routes/notesRoutes.js"
+import { connectDB } from './config/db.js';
+
+dotenv.config()
 
 const PORT = process.env.PORT || 5001;
 
 const app = express()
-dotenv.config()
+connectDB();
 
 
 app.get('/', (req, res) => {
