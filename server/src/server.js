@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5001;
 const app = express()
 connectDB();
 
-
+app.use(express.json()) // Middleware to convert req to json
 app.get('/', (req, res) => {
     res.status(200).send("Homepage");
 })
