@@ -3,15 +3,18 @@ import dotenv from 'dotenv'
 import noteRoutes from "./routes/notesRoutes.js"
 import { connectDB } from './config/db.js';
 import rateLimiter from './middleware/rateLimiter.js';
+import cors from 'cors'
 
 dotenv.config()
 
+const app = express()
 const PORT = process.env.PORT || 5001;
 
-const app = express()
-
-
 // Middleware
+app.use(cors(
+    {origin: "http://localhost:5173"}
+));
+
 app.use(express.json()); // Middleware to convert req to json
 app.use(rateLimiter);
 
