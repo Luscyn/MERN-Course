@@ -1,0 +1,21 @@
+{
+  "name": "mern-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luscyn/MERN-Course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luscyn/MERN-Course/issues"
+  },
+  "homepage": "https://github.com/Luscyn/MERN-Course#readme",
+  "description": ""
+}
